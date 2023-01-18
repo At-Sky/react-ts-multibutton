@@ -1,0 +1,190 @@
+.whatsapp {
+  background: #30d64f;
+}
+
+.viber {
+  background: #7b519d;
+}
+
+.call {
+  background: #ff2241;
+}
+
+.phone {
+  background: #03a9f4;
+}
+
+.yellow {
+  background: #ffce09;
+}
+
+.multibutton {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 70px;
+  height: 70px;
+  transition: 0.2s ease;
+
+  &:hover {
+    width: auto;
+    height: auto;
+
+    & .multibuttonList {
+      position: relative;
+      top: auto;
+      bottom: 10px;
+      visibility: visible;
+    }
+
+    & .multibuttonItem {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s ease;
+      transform: scaleX(1) scaleY(1) translateY(0);
+    }
+  }
+
+  &.hidden {
+    width: 70px!important;
+    height: 70px!important;
+  }
+
+  &List{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    gap: 5px;
+    visibility: hidden;
+    transition: 0.3s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &.hidden {
+      position: absolute !important;
+      top: 80px !important;
+      visibility: hidden !important;
+    }
+  }
+
+
+  &Item {
+    display: flex;
+    align-items: center;
+    margin: 4px 5px 0 0;
+    transform: scaleY(0.4) translateY(150px);
+    opacity: 0;
+    visibility: hidden;
+
+    &.hidden {
+      transform: scaleY(0.4) translateY(150px) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  }
+
+  &Title {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 30px;
+
+    &Main {
+      position: absolute;
+      top: 15px;
+      right: 80px;
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+      border-radius: 30px;
+      white-space: nowrap;
+      transition: opacity .4s ease-in, right .8s ease-in;
+      z-index: -1;
+    }
+  }
+
+  &Button {
+    width: 70px;
+    height: 70px;
+    background: #03a9f4;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* animation: animation_button 3s linear infinite; */
+    transition: all 200ms ease-out;
+    transition: backgroundColor 0ms ease-out;
+
+    & svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    // @keyframes animation_button {
+    //     0% {
+    //         box-shadow: 0 0 0 0 #ffba26, 0 0 0 0 rgba(255, 206, 9, 0.7);
+    //     }
+    //     40% {
+    //         box-shadow: 0 0 0 13.62667px rgba(255,186, 38, 0), 0 0 0 6.81333px rgba(255, 206, 9, 0.7);
+    //     }
+    //     80% {
+    //         box-shadow: 0 0 0 27.25333px rgba(255, 186, 38, 0), 0 0 0 13.62667px rgba(255,206, 9, 0);
+    //     }
+    //     100% {
+    //         box-shadow: 0 0 0 34.06667px rgba(255, 186, 38, 0), 0 0 0 27.25333px rgba(255, 206, 9, 0);
+    //     }
+    // }
+  }
+
+  &Icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+
+    & svg{
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+
+    &Main {
+      width: 30px;
+      height: 30px;
+    }
+
+    &Phone{
+      background: #03a9f4;
+    }
+
+    &Call{
+      background: #ff2241;
+    }
+
+    &Viber{
+      background: #7b519d;
+    }
+
+    &Whatsapp{
+      background: #30d64f;
+    }
+  }
+}
