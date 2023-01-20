@@ -1,11 +1,12 @@
 import * as React from "react";
 import { useRef, useEffect } from 'react';
 import classes from './Button.module.scss';
+import ym, {YMInitializer} from "react-yandex-metrika";
 
 interface IButtonProps {
-    metric: any;
+    metricaId: number;
 }
-function Button({metric}: IButtonProps): React.ReactElement<HTMLDivElement> {
+function Button({metricaId}: IButtonProps): React.ReactElement<HTMLDivElement> {
     let multibutton: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null)
     let multibuttonList: React.RefObject<HTMLUListElement> = useRef<HTMLUListElement>(null)
     let multibuttonButton: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null)
@@ -73,7 +74,8 @@ function Button({metric}: IButtonProps): React.ReactElement<HTMLDivElement> {
     }
 
     return (
-        <div className={classes.multibutton} onTouchEnd={toggleClasses} ref={multibutton} onClick={() => metric}>
+        <div className={classes.multibutton} onTouchEnd={toggleClasses} ref={multibutton} onClick={() => ym('reachGoal', 'btn')}>
+            <YMInitializer accounts={[metricaId]}/>
             <ul className={classes.multibuttonList} ref={multibuttonList}>
                 <li className={classes.multibuttonItem}>
                     <a href="tel:+375291112233" className={classes.multibuttonTitle}>Позвонить нам</a>

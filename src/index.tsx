@@ -6,6 +6,5 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-    <Button metric={'a'} />
+    <Button metricaId={92073621} />
 );
-//ym(92073621,'reachGoal','btn')
