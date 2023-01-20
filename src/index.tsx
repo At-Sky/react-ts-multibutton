@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Button from "./components/Button/Button";
+import React from 'react';
 import { createRoot } from 'react-dom/client';
+import Button from "./components/Button/Button";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

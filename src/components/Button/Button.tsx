@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useRef, useEffect } from 'react';
 import classes from './Button.module.scss';
 import ym, {YMInitializer} from "react-yandex-metrika";
